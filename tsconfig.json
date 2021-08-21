@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
     "incremental": true,
     "target": "es6",
     "module": "commonjs",
     "outDir": "./dist",
     "strict": true, // depende do seu nível de conhecimento em TypeScript, recomendo começar com false
     "esModuleInterop": true,
-    "allowJs" : false,
-    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "include": [
-    "src/**/*"
+    "./src"
   ],
   "exclude": [
     "./node_modules"

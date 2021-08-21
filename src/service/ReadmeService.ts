@@ -1,4 +1,4 @@
-import File from "../model/File";
+import File from "../entities/File";
 
 
 export default class ReadmeService {

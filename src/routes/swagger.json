@@ -1,0 +1,183 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Command": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"command": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"command"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Framework": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"url"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Project": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"repository": {
+						"type": "string"
+					},
+					"documentation": {
+						"type": "string"
+					},
+					"linkDemo": {
+						"type": "string"
+					},
+					"logoUrl": {
+						"type": "string"
+					},
+					"prerequisites": {
+						"items": {
+							"$ref": "#/components/schemas/Command"
+						},
+						"type": "array"
+					},
+					"usages": {
+						"items": {
+							"$ref": "#/components/schemas/Command"
+						},
+						"type": "array"
+					},
+					"frameworks": {
+						"items": {
+							"$ref": "#/components/schemas/Framework"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"name",
+					"description",
+					"repository",
+					"documentation",
+					"linkDemo",
+					"logoUrl",
+					"prerequisites",
+					"usages",
+					"frameworks"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"User": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"linkedin": {
+						"type": "string"
+					},
+					"github": {
+						"type": "string"
+					},
+					"twitter": {
+						"type": "string"
+					},
+					"instagram": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"linkedin",
+					"github",
+					"twitter",
+					"instagram",
+					"email"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ReadmeRequest": {
+				"properties": {
+					"project": {
+						"$ref": "#/components/schemas/Project"
+					},
+					"user": {
+						"$ref": "#/components/schemas/User"
+					}
+				},
+				"required": [
+					"project",
+					"user"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "readme-generator",
+		"version": "1.0.0",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/readme": {
+			"post": {
+				"operationId": "GenerateReadme",
+				"responses": {
+					"201": {
+						"description": "Created"
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReadmeRequest"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}

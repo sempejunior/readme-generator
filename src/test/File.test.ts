@@ -32,6 +32,6 @@ test("Find template readme", async function () {
    const readmeGenerated = await service.buildReadmeContent(context);
    console.log(readmeGenerated);
 
-   file.writeFile(readmeGenerated);
+   service.generateRedme(readmeGenerated);
    expect(readmeGenerated).toMatchSnapshot();
 });
