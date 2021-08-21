@@ -1,0 +1,19 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && jest dist/"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.0.6",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "fs": "^0.0.1-security"
+  }
+}
