@@ -13,7 +13,7 @@ const models: TsoaRoute.Models = {
         "dataType": "refObject",
         "properties": {
             "name": {"dataType":"string","required":true},
-            "command": {"dataType":"string","required":true},
+            "execute": {"dataType":"string","required":true},
         },
         "additionalProperties": false,
     },
@@ -34,7 +34,6 @@ const models: TsoaRoute.Models = {
             "description": {"dataType":"string","required":true},
             "repository": {"dataType":"string","required":true},
             "documentation": {"dataType":"string","required":true},
-            "linkDemo": {"dataType":"string","required":true},
             "logoUrl": {"dataType":"string","required":true},
             "prerequisites": {"dataType":"array","array":{"dataType":"refObject","ref":"Command"},"required":true},
             "usages": {"dataType":"array","array":{"dataType":"refObject","ref":"Command"},"required":true},
@@ -48,9 +47,6 @@ const models: TsoaRoute.Models = {
         "properties": {
             "name": {"dataType":"string","required":true},
             "linkedin": {"dataType":"string","required":true},
-            "github": {"dataType":"string","required":true},
-            "twitter": {"dataType":"string","required":true},
-            "instagram": {"dataType":"string","required":true},
             "email": {"dataType":"string","required":true},
         },
         "additionalProperties": false,

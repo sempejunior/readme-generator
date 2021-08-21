@@ -12,18 +12,8 @@ export class ReadmeController extends Controller {
     public async generateReadme(@Body() request: ReadmeRequest): Promise<void> {
         const service = new ReadmeService();
 
-        const context = {
-            name: "Projeto Teste",
-            description: "Essa é uma descrição do projeto",
-            repository: "Esse é o repository do projeto",
-            documentation: "https://www.google.com.br/",
-            linkDemo: "https://www.google.com.br/",
-            logoUrl: "https://t.ctcdn.com.br/I57q7__L1DbsBY-b47yZMXFPnjM=/filters:watermark(wm/v1.png,center,center,1,20)/i257633.jpeg",
-            frameworks: [
-                "Java", "Node"
-            ]
-        }
-        const readmeGenerated = await service.buildReadmeContent(context);
+       console.log(request);
+        const readmeGenerated = await service.buildReadmeContent(request);
         console.log(readmeGenerated);
 
         service.generateRedme(readmeGenerated);

@@ -5,6 +5,4 @@ export default interface ReadmeRequest{
 
     project : Project;
     user: User;
-    
-
 }

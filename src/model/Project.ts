@@ -7,10 +7,8 @@ export interface Project {
     description: string;
     repository: string;
     documentation: string;
-    linkDemo: string;
     logoUrl: string;
     prerequisites: Command[];
     usages: Command[];
     frameworks: Framework[];
-
 }

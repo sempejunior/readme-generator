@@ -11,13 +11,13 @@
 					"name": {
 						"type": "string"
 					},
-					"command": {
+					"execute": {
 						"type": "string"
 					}
 				},
 				"required": [
 					"name",
-					"command"
+					"execute"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -52,9 +52,6 @@
 					"documentation": {
 						"type": "string"
 					},
-					"linkDemo": {
-						"type": "string"
-					},
 					"logoUrl": {
 						"type": "string"
 					},
@@ -82,7 +79,6 @@
 					"description",
 					"repository",
 					"documentation",
-					"linkDemo",
 					"logoUrl",
 					"prerequisites",
 					"usages",
@@ -99,15 +95,6 @@
 					"linkedin": {
 						"type": "string"
 					},
-					"github": {
-						"type": "string"
-					},
-					"twitter": {
-						"type": "string"
-					},
-					"instagram": {
-						"type": "string"
-					},
 					"email": {
 						"type": "string"
 					}
@@ -115,9 +102,6 @@
 				"required": [
 					"name",
 					"linkedin",
-					"github",
-					"twitter",
-					"instagram",
 					"email"
 				],
 				"type": "object",
