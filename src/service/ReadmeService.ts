@@ -1,7 +1,7 @@
 import File from "../model/File";
 
 
-export default class FileService {
+export default class ReadmeService {
 
     
     ejs = require('ejs');

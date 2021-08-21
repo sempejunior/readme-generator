@@ -1,5 +1,5 @@
-import File from "../model/File";
-import FileService from "../service/FileService";
+import File from "../entities/File";
+import FileService from "../service/ReadmeService";
 
 // test("Should calculate the area of circle", function () {
 //     const file = new File("./","teste.txt");
